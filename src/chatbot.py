@@ -1,12 +1,12 @@
 # filepath: e-chat-streamlit/e-chat-streamlit/src/chatbot.py
 
-import streamlit
+import streamlit as st
 import os
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from loaders import carrega_site, carrega_pdf
 
-api_key = streamlit.secrets = ['GROQ_API_KEY']
+api_key = st.secrets = ['GROQ_API_KEY']
 os.environ['GROQ_API_KEY'] = api_key
 
 chat = ChatGroq(model='llama-3.3-70b-versatile')

@@ -1,10 +1,15 @@
 # filepath: e-chat-streamlit/e-chat-streamlit/src/chatbot.py
 
 import streamlit as st
-import os
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from loaders import carrega_site, carrega_pdf
+
+try:
+    groq_api_key = st.secrets["GROQ_API_KEY"]
+except KeyError:
+    st.error("Chave 'GROQ_API_KEY' não encontrada nos segredos do Streamlit. Verifique a ortografia.")
+    st.stop()
 
 api_key = st.secrets = ['GROQ_API_KEY']
 os.environ['GROQ_API_KEY'] = api_key

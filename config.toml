@@ -1,0 +1,16 @@
+[general]
+email = "your_email@example.com"
+# Replace with your email for Streamlit sharing notifications
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+# Set to true if you want to enable CORS
+
+[theme]
+primaryColor = "#F39C12"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F7F7F7"
+textColor = "#000000"
+font = "sans serif"

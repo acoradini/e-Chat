@@ -14,9 +14,7 @@ except KeyError:
     st.error("Chave 'GROQ_API_KEY' não encontrada nos segredos do Streamlit. Verifique a ortografia.")
     st.stop()
 
-api_key = st.secrets['GROQ_API_KEY']
-
-chat = ChatGroq(model='llama-3.3-70b-versatile')
+chat = ChatGroq(groq_api_key=groq_api_key, model='llama-3.3-70b-versatile')
 
 def resposta_bot(mensagens, document):
     message_system = '''Você é um assistente amigável chamado Asimo.

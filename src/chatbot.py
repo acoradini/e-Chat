@@ -5,6 +5,9 @@ from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from loaders import carrega_site, carrega_pdf
 
+st.title("✅ Aplicativo Inicializado!") # <--- ADICIONE ESTA LINHA
+st.markdown("Se você está vendo este título, o erro está abaixo.") # <--- ADICIONE ESTA LINHA
+
 try:
     groq_api_key = st.secrets["GROQ_API_KEY"]
 except KeyError:

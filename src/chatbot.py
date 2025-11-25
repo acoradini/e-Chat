@@ -4,7 +4,7 @@ import streamlit as st
 # Não precisamos de 'os'
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
-from src.loaders import carrega_site, carrega_pdf # Se loaders está em src/
+from loaders import carrega_site, carrega_pdf
 
 # Removido o teste de inicialização, que pode causar erros quando importado.
 # Removido o import 'os'

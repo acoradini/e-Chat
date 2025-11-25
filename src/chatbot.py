@@ -12,7 +12,6 @@ except KeyError:
     st.stop()
 
 api_key = st.secrets['GROQ_API_KEY']
-os.environ['GROQ_API_KEY'] = api_key
 
 chat = ChatGroq(model='llama-3.3-70b-versatile')
 

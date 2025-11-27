@@ -6,8 +6,11 @@ email = "your_email@example.com"
 headless = true
 port = 8501
 enableCORS = false
+baseUrlPath = "/"
 # Set to true if you want to enable CORS
 
+[client]
+showErrorDetails = true
 [theme]
 primaryColor = "#F39C12"
 backgroundColor = "#FFFFFF"
